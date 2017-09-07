@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Countries CRUD</title>
+  <style>
+    input[type='submit'], button, [aria-label]{
+      cursor: pointer;
+    }
+    #spoiler{
+      display: none;
+    }
+  </style>
+  <div id="myDIV"></div>
+  <p id="demo2"></p>
+  <p id="demo"></p>
+  <p id="dem"></p>
+  <p id="time"></p>
+  <p id="day"></p>
+<body>
+   
+  <h3>What Manis and Bhuvi doing?</h3>
+   <p id="dem">we are learning the lang of java script in initial stage.</p>
+   <button type="button" onclick='document.getElementById("dem").innerHTML = "Learning mode ON!"'>Click Me!</button>
+   <button onclick="document.getElementById('myImage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsO5u2wioYUMp1HN4CN3QhPn7fTM4HCj4afl_FHNIdh9GHnGaBw'">Feel Free</button>
+   <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsO5u2wioYUMp1HN4CN3QhPn7fTM4HCj4afl_FHNIdh9GHnGaBw" style="width:100px">
+   <button onclick="document.write(5 + 6)">Try it</button>
+   <button onclick="displayDate()">The time is?</button>
+ </tbody>
+<script>
+var cars = ["Jesus", "Manis", "Bhuvi"];
+var text = "";
+var i;
+for (i = 0; i < cars.length; i++) {
+    text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+function displayDate() {
+    document.getElementById("time").innerHTML = Date();
+	}	
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+}
+
+document.getElementById("day").innerHTML = "Today is " + day;
+</script>
+</head>
